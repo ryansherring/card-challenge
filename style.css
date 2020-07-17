@@ -1,0 +1,242 @@
+/* Global */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    margin: 0;
+    background-color: #e7e7e7;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Credit Card */
+  
+  .credit-card {
+    width: 35vw;
+    height: 65vh;
+    margin: 60px auto 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-header {
+    height: 60px;
+    padding: 20px 30px 0;
+    border-bottom: 1px solid #e1e8ee;
+    background-color: gold;
+  }
+  .title {
+      color: green;
+      text-align: center;
+      margin: auto; 
+  }
+  
+  .form-body {
+    height: 340px;
+    padding: 30px 30px 20px;
+  }
+  
+  /* Title */
+  
+  .title {
+    margin: 0;
+    color: #5e6977;
+    font-size: 18px;
+  }
+  
+  /* Common */
+  
+  .card-number,.cvv-input input,.month select,.paypal-btn,.proceed-btn,.year select {
+    height: 42px;
+  }
+  
+  .card-number,.month select,.year select {
+    font-size: auto;
+    font-weight: auto;
+    line-height: 14px;
+  }
+  
+  .card-number,.cvv-details,.cvv-input input,.month select,.year select {
+    color: #86939e;
+    opacity: 0.7;
+  }
+  
+  /* Card Number */
+  .card-fields{
+      float: left;
+      margin-left: 10%;
+  }
+  .card-number {
+    width: 20%;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+  }
+  
+  /* Date Field */
+  .date-field{
+    margin-left: 25%;
+  }
+  .month select,.year select {
+    /* -moz-appearance: none;
+    -webkit-appearance: none; */
+    width: 30%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    background: url("caret.png") no-repeat;
+    background-position: 85% 50%;
+  }
+  
+  .month select {
+    float: left;
+  }
+  
+  .year select {
+    float: left;
+    margin-left: 10%;
+  }
+  
+  /* Card Verification Field */
+  
+  .card-verification {
+      margin-top: 5%;
+  }
+
+  .cvv-input input {
+    width: 20%;
+    float: left;
+    padding-left: 2%;
+    border: 2px solid #e1e8ee;
+    border-radius: 6px;
+    background: #fff;
+    margin-left: 25%;
+  }
+  
+  .cvv-details {
+    float: left;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+  
+  .cvv-details p {
+    margin-top: 6px;
+  }
+  
+  /* Buttons Section */
+  
+  .clear-btn,.proceed-btn,.back-btn {
+    cursor: pointer;
+    width: 100%;
+    border-color: transparent;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .proceed-btn {
+    margin-bottom: 10px;
+    margin-left: 20%;
+    background: #7dc855;
+    width: 60%;
+  }
+  
+  .clear-btn a,.proceed-btn a,.back-btn a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .proceed-btn a {
+    color: #fff;
+  }
+  
+  .clear-btn a, .back-btn-a {
+    color: rgba(242, 242, 242, 0.7);
+  }
+  
+  .clear-btn, .back-btn{
+    border-radius: 6px;
+    font-size: 16px;
+    margin-left: 14%;
+    width: 30%;
+    float: left;
+    padding: 1%;
+    background: #009cde;
+    margin-bottom: 10px;
+}
+  
+
+
+
+
+/* //////////////////MODAL ////////////////////////////////// */
+
+/* center the modal and basic styling/animation */
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+/* Great Exercise! Totally forgot about parent-child options. Will have to fix calendar challenge with this later */
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(green, gold);
+	background: -webkit-linear-gradient(green, gold);
+	background: -o-linear-gradient(green, gold);
+}
+
+/* CLOSE BUTTON (sehr schwerig) */
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #00d9ff; }
+
+
+
