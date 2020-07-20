@@ -16,11 +16,11 @@
           <!-- Card Number -->
           <div class="card-fields">
               <!-- I didn't have a prompt for an audience for who to make the card, 
-                so I went the full-accessability route. For older folks unlikely to double-check their info, 
+                so I went the full-accessability route. For folks unlikely to double-check their info, 
                 I sacrificed seconds of ease-of-input for a click-each-field route so that they are more likely to get it right.
                 For other audiences, I would use a simple RegEx mask to add dashes or speces between fields in a singular input.
                 -->
-          <input type="text" class="card-number" id="part1" placeholder="Card #" minlength="3" maxlength="4" onchange="ccnum(this.value)" required> -
+          <input type="text" class="card-number" id="part1" placeholder="Card #" minlength="3" maxlength="4"  required> -
           <input type="text" class="card-number" id="part2" placeholder="Card #" minlength="3" maxlength="4" required> -
           <input type="text" class="card-number" id="part3" placeholder="Card #" minlength="3" maxlength="4" required> -
           <input type="text" class="card-number" id="part4" placeholder="Card #" minlength="4" maxlength="7" required>
@@ -64,7 +64,7 @@
               <input type="text" placeholder="CVV" maxlength="4"id="cvv">
             </div>
             <div class="cvv-details">
-              <p>3 or 4 digits usually found <br> on the signature strip</p>
+              <p>3 or 4 numbers usually <br> on the back of the card</p>
             </div>
           </div>
        
@@ -73,18 +73,18 @@
         </div>
       </form>
 
+      <!-- Modal -->
 
       <div id="openModal" class="modalDialog">
         <div>
             <a href="#close" title="Close" class="close">X</a>
             <h2>Confirmation!</h2>
-            <p>Card number: </p> <p id="ccnumconfirm"></p>
-            <p>Expiration Date: </p> <p id="dateconfirm"></p>
-            <p>CVV: </p> <p id="cvvconfirm"></p>
-            <p>I would have loved to make this look better by making this modal div a card vector with a css flip animation, but I'm out of time!</p>
-        </div>
+            <p id="ccnumconfirm">Card number: </p>
+            <p id="dateconfirm">Expiration Date: </p>
+            <p id="cvvconfirm">CVV: </p>
+      <p>I would have loved to make this look better by making this modal div a card vector with a css flip animation, but I'm out of time!</p>
+            </div>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>
